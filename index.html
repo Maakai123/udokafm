@@ -21,16 +21,45 @@
        
         <ul class="main-nav-list">
             <li><a class="main-nav-link" href="#">Home</a></li>
-            <li><a class="main-nav-link" href="#">Show Schedules</a></li>
+            <li><a class="main-nav-link" href="schedules.html" target="_blank">Show Schedules</a></li>
+            <li><a class="main-nav-link" href="#">OAP'S</a></li>
             <li><a class="main-nav-link" href="#">About Us</a></li>
-            <li><a class="main-nav-link" href="#">Contact Us</a></li>
+            <li><a class="main-nav-link" href="#">Let's do business </a></li>
             <li><a class="main-nav-link nav-cta" href="#">Listen Live</a></li>
         </ul>     
     </nav>
 
-    <audio id="audio" src="./music/Jealous feat Chandler Moore  Lizzie Morgan  Maverick City Music x Kirk Franklin.mp3"></audio>
-    <button id="playButton">Play</button>
-    <button id="stopButton">Stop</button>
+
+
+  <div class="audio-container  hidden">
+    
+    <div class="audio-content">
+        <div class="audio-icon">
+            <ion-icon  class="audio-icon" name="list-outline"></ion-icon>
+         <button class="btn--cancel">
+            <ion-icon class="audio-icon absolute  big--icon "  name ="close-outline"></ion-icon>
+        </button>
+        </div>   
+        
+        <div class="audio-image-container">
+           <img  class="audio-image" src="Image/udoka fm.jpg" alt="udoka fm image">
+        </div>
+        <div  class="audio-header">100.3 udoka FM<br><span class="italic">News and Talk.....</span></div>
+    </div>
+
+    <div class="music-player">
+
+        <audio>
+            <source src="music/y2mate.com - DON JAZZY ft JOHNNYDRILL  my friend OFFICIAL VIDEO.mp3" type="audio/mpeg">  
+        </audio>
+
+        <ion-icon  class="back"  name="play-skip-back-outline"></ion-icon>
+        <ion-icon class="play-pause" name="play-outline"></ion-icon>
+        <ion-icon  class="forward"  name="play-skip-forward-outline"></ion-icon>
+        
+    </div>
+  
+  </div>
 
     
   </header>
@@ -40,15 +69,16 @@
     <section class="section-hero">
      <div class="hero">
         <div class="hero-text-box">
-            <h1 class="heading-primary">100.3 UDOKA FM <span class="span">FIRST FOR NEWS </span> AND TALK</h1>
+            <h1 class="heading-primary">100.3 UDOKA FM <br><span class="span">First For News and Talk.</span></h1>
         
         <P class="hero-description">
             100.3 Udoka FM is a current affairs radio based in Enugu, get all the latest,
             gits, news, sports and entertainment.
         </P>
-      <div class="btn-container">
-            <a class="btn btn--schedule" href="#"><ion-icon class="time-icon" name="time-outline"></ion-icon>Schedule</a>
-            <a class="btn btn--live" href="#">Listen Live</a>
+      <div class="btn-container"> 
+       
+            <a class="btn btn--schedule" href="schedules.html" target="_blank"><ion-icon class="time-icon" name="time-outline"></ion-icon><span>Schedule</span></a>
+            <a class="btn btn--live" href="#"><ion-icon class="play--pause" name="play-outline"></ion-icon><span>Listen Live</span></a>
       </div>
     </div>
         <div class="microphone-image">
@@ -61,35 +91,45 @@
 
     <section class="section-programs">
         <div class="container">
-        <span class="heading">UPCOMING SHOWS</span>
-        </div>
-     <div class="container grid  grid--3-cols margin-top ">
-        <div class="programs">
+        <div class="heading">UPCOMING SHOWS</div>
+    </div>
+     <div class="container grid  grid--3-cols "> <!--margin-top-->
+        <div class="programs" >
          <div class="programs-content">
-            <h1>Monday</h1>
-            <h2>7:00am - 7:55am</h2>
+            <img src="Image/Paper Splash.jpg" class="ako">
             <a class="program-link font-size" href="#">Paper Splash</a>
          </div>
         </div>
 
         <div class="programs">
             <div class="programs-content">
-                <h1 class="days">Monday</h1>
-                <h2 class="time">8:00am - 8:55am</h2>
+                <img src="Image/South East.jpg" class="ako">
+               <!--<h1 class="days">Monday</h1>
+               <h2 class="time">8:00am - 8:55am</h2>---> 
                 <a class="program-link font-size" href="#">South East I-report</a>
             </div>
         </div>
 
         <div class="programs">
           <div class="programs-content">
-            <h1>Monday</h1>
-             <h2>9:00am - 9:55am</h2>
+            <img src="Image/Udoka sports.jpg" class="ako">
             <a class="program-link font-size" href="#">Udoka Sports</a>
           </div>
         </div>
 
      </div>
     </section>
+   
+    <section class="section-news">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            </div>
+        </div>
+    </section>
+    
 
     <footer class="footer">
 
@@ -144,23 +184,11 @@
     </footer>
   </main>
 
-  <script>
-    const audio = document.getElementById('audio');
-    const playButton = document.getElementById('playButton');
-    const stopButton = document.getElementById('stopButton');
-
-    playButton.addEventListener('click', () => {
-        audio.play().catch(error => console.error('Error playing audio:', error));
-    });
-
-    stopButton.addEventListener('click', () => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
-</script>
+ 
   
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="udoka.js"></script>
 
 
 </body>
