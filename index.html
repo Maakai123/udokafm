@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100.3 UdokaFM &mdash; First for news and Talk </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <title>100.3 UdokaFM &mdash; First for news and Talk </title>
 </head>
 <body>
   <header class="header">
@@ -21,13 +22,58 @@
        
         <ul class="main-nav-list">
             <li><a class="main-nav-link" href="#">Home</a></li>
-            <li><a class="main-nav-link" href="schedules.html" target="_blank">Show Schedules</a></li>
-            <li><a class="main-nav-link" href="#">OAP'S</a></li>
-            <li><a class="main-nav-link" href="#">About Us</a></li>
+
+            <li><a class="main-nav-link  schedule--link" href="schedules.html" target="_blank">Show Schedules</a>
+             
+               
+                    <ul class="drop-down-list">
+                        <li><a class="drop-down-link" href="">Paper Splash</a></li>
+                        <li><a class="drop-down-link" href="">SouthEast I-report</a></li>
+                        <li><a class="drop-down-link" href="">Udoka Sports</a></li>
+                        <li><a class="drop-down-link" href="">conversation</a></li>
+                        <li><a class="drop-down-link" href="">Vogue</a></li>
+                        <li><a class="drop-down-link" href="">Trenches</a></li>
+                        <li><a class="drop-down-link" href="">The football show</a></li>
+                        <li><a class="drop-down-link" href="">The paragon</a></li>
+                        <li><a class="drop-down-link" href="">IWOJI</a></li>
+                        <li><a class="drop-down-link" href="">Kiddies Time</a></li>
+                        <li><a class="drop-down-link" href="">AKO NA UCHE</a></li>
+                        <li><a class="drop-down-link" href="">FEMINI</a></li>
+                    </ul>    
+                        
+                
+            </li>
+
+
+            <li><a class="main-nav-link oap--link" href="#">OAP'S</a>
+                 
+                    <ul class="drop-down-list">
+                        <li><a class="drop-down-link" href="">BIGGY</a></li>
+                        <li><a class="drop-down-link" href="">URAY</a></li>
+                        <li><a class="drop-down-link" href="">FENANDA</a></li>
+                        <li><a class="drop-down-link" href="">PRINCE</a></li>
+                        <li><a class="drop-down-link" href="">ANGEL</a></li>
+                        <li><a class="drop-down-link" href="">SUGAR</a></li>
+                        <li><a class="drop-down-link" href="">THE SAGE</a></li>
+                        <li><a class="drop-down-link" href="">UZ</a></li>
+                        <li><a class="drop-down-link" href="">FIFI</a></li>
+                        <li><a class="drop-down-link" href="">DIKE</a></li>
+                        <li><a class="drop-down-link" href="">JOSHUA</a></li>
+                    </ul> 
+                   
+            </li>
+
+            <li><a class="main-nav-link" href="">About Us</a></li>
             <li><a class="main-nav-link" href="#">Let's do business </a></li>
             <li><a class="main-nav-link nav-cta" href="#">Listen Live</a></li>
         </ul>     
     </nav>
+
+    <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+
 
 
 
@@ -64,6 +110,8 @@
     
   </header>
 
+
+
   <main>
     <!--Hero-->
     <section class="section-hero">
@@ -77,7 +125,7 @@
         </P>
       <div class="btn-container"> 
        
-            <a class="btn btn--schedule" href="schedules.html" target="_blank"><ion-icon class="time-icon" name="time-outline"></ion-icon><span>Schedule</span></a>
+            <a class="btn btn--schedule" href="index.html" target="_blank"><ion-icon class="time-icon" name="time-outline"></ion-icon><span>Schedule</span></a>
             <a class="btn btn--live" href="#"><ion-icon class="play--pause" name="play-outline"></ion-icon><span>Listen Live</span></a>
       </div>
     </div>
@@ -91,38 +139,74 @@
 
     <section class="section-programs">
         <div class="container">
-        <div class="heading">UPCOMING SHOWS</div>
+        <div class="heading">LIVE  SHOWS</div>
+        
     </div>
-     <div class="container grid  grid--3-cols "> <!--margin-top-->
-        <div class="programs" >
-         <div class="programs-content">
-            <img src="Image/Paper Splash.jpg" class="ako">
-            <a class="program-link font-size" href="#">Paper Splash</a>
-         </div>
+     <div class="image-slider"> 
+         
+
+        <div class="programs">
+            <div class="programs-content">
+                <img src="Image/G-star.jpg" class="ako">
+               <!--<h1 class="days">Monday</h1>
+               <h2 class="time">8:00am - 8:55am</h2>---> 
+            </div>
         </div>
+
 
         <div class="programs">
             <div class="programs-content">
                 <img src="Image/South East.jpg" class="ako">
                <!--<h1 class="days">Monday</h1>
                <h2 class="time">8:00am - 8:55am</h2>---> 
-                <a class="program-link font-size" href="#">South East I-report</a>
             </div>
         </div>
 
         <div class="programs">
           <div class="programs-content">
             <img src="Image/Udoka sports.jpg" class="ako">
-            <a class="program-link font-size" href="#">Udoka Sports</a>
           </div>
+          <h1>Udoka Sports</h1>
         </div>
 
+
+        <div class="programs">
+            <div class="programs-content">
+              <img src="Image/Trenches.jpg" class="ako">
+            </div>
+            <h1>Trenches</h1>
+          </div>
+          
+        
+
+          
+
      </div>
+
+     
     </section>
    
     <section class="section-news">
         <div class="container">
             <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
+            <div class="col-sm-12 col-md-6 col-lg-12">1</div>
+            <div class="col">2</div>
+            <div class="col-sm-4 col-md-6 col-lg-12">3</div>
             <div class="col-sm-12 col-md-6 col-lg-12">1</div>
             <div class="col">2</div>
             <div class="col-sm-4 col-md-6 col-lg-12">3</div>
@@ -171,7 +255,7 @@
             </div>
 
             <nav class="nav-col">
-                <p class="footer-heading">Menu</p>
+                <p class="footer-heading  margin-left">Menu</p>
                 <ul class="footer-menu">
                     <li><a class="footer-link" href="#">Home</a></li>
                     <li><a class="footer-link" href="#">Show Schedules</a></li>
@@ -188,6 +272,7 @@
   
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script src="udoka.js"></script>
 
 

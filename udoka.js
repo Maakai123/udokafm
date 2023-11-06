@@ -10,7 +10,24 @@ const playPause = document.querySelector('.play-pause')
 const playAndPause = document.querySelector('.play--pause')
 const musicPlayer = document.querySelector('.music-player')
 
+const dropDownList = document.querySelectorAll('.drop-down-list')
 
+//hero sticky
+const sectionHero = document.querySelector('.section-hero')
+
+//Smooth scrolling, make it  work on all browsers
+const allLinks = document.querySelectorAll('a:link');
+//Make mobile navigation work
+
+const btnNavEl = document.querySelector('.icon-mobile-nav')
+const headerEl = document.querySelector('.header')
+
+
+/*Mobile */
+
+btnNavEl.addEventListener('click', function(){
+  headerEl.classList.toggle('nav-open')
+})
 
 
 /*
@@ -79,7 +96,136 @@ playAndPause.setAttribute('name', 'play-outline')
 })
 
 
-//schedules
-days.addEventListener('click', function(){
-    console.log('monday')
+
+dropDownList.forEach(list => {
+  list.addEventListener('click', function(e) {
+    e.preventDefault()
+   
+  })
 })
+
+
+//Sticky
+
+const obs = new IntersectionObserver(
+  function(entries){
+    const ent = entries[0];
+    console.log(ent)
+
+    if(ent.isIntersecting === false){
+      //Body should removeclassList sticky if true
+      document.body.classList.add('sticky')
+    }
+
+    if(ent.isIntersecting === true){
+      //Body should reomoveclassList sticky if true
+      document.body.classList.remove('sticky')
+    }
+  },
+  {
+    //in the viewport
+    root: null,
+    threshold:0,
+    rootMargin: "-80px"
+  }
+);
+
+obs.observe(sectionHero)
+
+//slide
+
+
+//Slider 
+
+const slideFunc = function () {
+  const slides = document.querySelectorAll('.programs')
+  const slider = document.querySelector('.image-slider')
+  const btnRight = document.querySelector('.slider__btn--left')
+  const btnLeft = document.querySelector('.slider__btn--right')
+
+
+  console.log(slides)
+
+let currentSlide = 0;
+const maxSlide =  slides.length;
+
+const goToSlide = function(slide){
+  slides.forEach( (s,i) => s.style.transform = `translateX(${100 * (i - slide)}%)`)
+}
+
+const nextSlide = function(){
+
+currentSlide = (currentSlide + 1) % maxSlide;
+  
+  goToSlide(currentSlide)
+}
+
+
+
+const prevSlide = function() {
+  if(currentSlide === 0){
+    currentSlide = maxSlide -1
+  } else {
+    currentSlide--;
+  }
+
+  goToSlide(currentSlide)
+}
+
+
+const init = function(){
+  goToSlide(0)
+}
+
+init()
+
+
+//Events
+setInterval( nextSlide , 6000);
+}
+
+slideFunc()
+
+/*
+//Smooth scrolling, make it  work on all browsers
+allLinks.forEach(function(link) {
+  link.addEventListener('click', function(e){
+    e.preventDefault()
+    const href = link.getAttribute('href') 
+
+    if(href === "#")
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+  });
+
+  if(href !== "#" && href.startsWith("#")){
+    const sectionEl = document.querySelector(href);
+    console.log(sectionEl)
+    sectionEl.scrollIntoView({behavior: "smooth"})
+}
+  })
+})
+
+*/
+
+
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+    var flex = document.createElement("div");
+    flex.style.display = "flex";
+    flex.style.flexDirection = "column";
+    flex.style.rowGap = "1px";
+  
+    flex.appendChild(document.createElement("div"));
+    flex.appendChild(document.createElement("div"));
+  
+    document.body.appendChild(flex);
+    var isSupported = flex.scrollHeight === 1;
+    flex.parentNode.removeChild(flex);
+    console.log(isSupported);
+  
+    if (!isSupported) document.body.classList.add("no-flexbox-gap");// This will add flex gap to
+    //Safari  incase it does not support flex box gap==> check Css file (Last part)
+  }
+  checkFlexGap();
