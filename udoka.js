@@ -19,8 +19,9 @@ const sectionHero = document.querySelector('.section-hero')
 const allLinks = document.querySelectorAll('a:link');
 //Make mobile navigation work
 
-const btnNavEl = document.querySelector('.icon-mobile-nav')
+const btnNavEl = document.querySelector('.btn-mobile-nav')
 const headerEl = document.querySelector('.header')
+
 
 
 /*Mobile */

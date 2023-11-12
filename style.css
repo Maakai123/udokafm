@@ -128,7 +128,7 @@ position: relative;
  list-style: none;
  display: flex;
  align-items: center;
- gap: 15rem;
+ gap: 5rem;
  padding:0 10rem;
  text-transform: uppercase;
 }
