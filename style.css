@@ -102,7 +102,7 @@ body{
 
 .header{
  display:flex;
- justify-content:center;
+ justify-content:space-between;
  align-items: center;
  background-color: #f3f3f3;
  height: 12.5rem;
@@ -111,8 +111,8 @@ body{
 }
 
 .station-logo{
-padding: 0 6rem;
-width:5rem;
+padding: 6rem;
+
 }
 
 
@@ -127,8 +127,9 @@ position: relative;
 .main-nav-list{
  list-style: none;
  display: flex;
+ justify-content:center;
  align-items: center;
- gap: 5rem;
+ gap: 2rem;
  padding:0 10rem;
  text-transform: uppercase;
 }
