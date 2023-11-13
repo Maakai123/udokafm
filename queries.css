@@ -169,6 +169,9 @@ grid-template-columns: 1fr;
  z-index: 9999;  /*For btn to be focused*/
  } 
  
+ .drop-down-list{
+    display: none !important;
+}
  .main-nav{
 background-color: rgba(255, 255, 255, 10);
 --webkit-backdrop-filter:blur(5px);
@@ -217,7 +220,49 @@ transform:translateX(0)
     font-size: 2rem;
 }
 
+
+
+.schedule-nav {
+    display: none;
+  }
+
+.schedule-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .schedule-nav-link:link,
+  .schedule-nav-link:visited {
+    text-decoration: none;
+    color: #be4bdb;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: 2px solid #181031;
+    padding: 1rem;
+  }
+
+  .schedule-nav-link:hover,
+  .schedule-nav-link:active {
+    color: #862e9c;
+  }
+
+
+  .schedule-day{
+    grid-template-columns:1fr;
 }
+
+.mobile-days{
+display: block;
+}
+
+.listen--live{
+width: 100%;
+}
+}
+
+/* on mobile hide udoka fm picture */
 
 
 /* 704 */

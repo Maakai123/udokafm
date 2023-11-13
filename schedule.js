@@ -9,13 +9,15 @@ const playPause = document.querySelector('.play--pause')
 const scheduleContainer = document.querySelector('.schedule-container')
 const scheduleDays = document.querySelectorAll('.schedule-day')
 const days = document.querySelectorAll('.schedule-nav-link')
-
+const scheduleNav = document.querySelector('.schedule-nav')
 
 
 const today = new Date()
 
 const currentDay = today.getDay()
 console.log(currentDay)
+
+
 
 days.forEach((day, index) => {
 
@@ -24,8 +26,8 @@ days.forEach((day, index) => {
       scheduleDays[index].classList.remove('hide__content')  
     }
 
-
-
+      
+    console.log(currentDay)
     day.addEventListener('click', function(){
         
         days.forEach(day => {
@@ -43,6 +45,7 @@ days.forEach((day, index) => {
 })
 
 
+
 playPause.addEventListener('click', function(){
    if(audio.paused){
     //If audio is paused play it
@@ -55,3 +58,5 @@ playPause.addEventListener('click', function(){
     playPause.setAttribute('name','play-outline')
    }
 })
+
+
