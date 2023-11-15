@@ -599,7 +599,7 @@ margin-top: 7rem;
 .image-slider{
 
  max-width: 100rem;
- height: 30rem;
+ height: 45rem;
  margin: 0 auto;
  position: relative;
  overflow: hidden;
@@ -616,6 +616,7 @@ justify-content: center;
  cursor: pointer;
  transition: all 0.4s;
 */
+
 
 }
 
@@ -638,8 +639,9 @@ object-fit: cover;
  margin-bottom: 2rem ;
  */
 
- position: absolute;
+position: absolute;
 top:0;
+bottom:100;
 width:60%;
 height: 30rem;
 display:flex;
@@ -947,6 +949,43 @@ display:none;
 }
 
 
+.live{
+background-color: #ff0000;
+color: #fff;
+font-size: 1.5rem;
+padding: 1rem 2rem;
+display: inline-block;
+animation: pulse 1s infinite;
+border-radius: 3px;
+
+}
+
+.programs-title{
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+  
+  
+  
+  
+  
 
 .live-shows-content{
     display:grid;

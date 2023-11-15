@@ -15,6 +15,9 @@ const dropDownList = document.querySelectorAll('.drop-down-list')
 //hero sticky
 const sectionHero = document.querySelector('.section-hero')
 
+
+
+
 //Smooth scrolling, make it  work on all browsers
 const allLinks = document.querySelectorAll('a:link');
 //Make mobile navigation work
@@ -41,6 +44,11 @@ stopButton.addEventListener('click', () => {
     audio.currentTime = 0;
 });
 */
+
+
+
+
+
 
 displayBtn.addEventListener('click', function() {
     audioContainer.classList.remove('hidden')
@@ -143,6 +151,8 @@ const slideFunc = function () {
   const slider = document.querySelector('.image-slider')
   const btnRight = document.querySelector('.slider__btn--left')
   const btnLeft = document.querySelector('.slider__btn--right')
+  //programs
+const imageSlider = document.querySelectorAll('.image-slider');
 
 
   console.log(slides)
@@ -163,6 +173,20 @@ currentSlide = (currentSlide + 1) % maxSlide;
 
 
 
+//programs 
+const today = new Date()
+const currentDay= today.getDay()
+
+imageSlider.forEach((slide, index) => {
+  if(index === currentDay){
+    slide.classList.remove('hide__content')
+  } else {
+    slide.classList.add('hide__content')
+  }
+})
+
+console.log(currentDay)
+
 const prevSlide = function() {
   if(currentSlide === 0){
     currentSlide = maxSlide -1
@@ -170,7 +194,7 @@ const prevSlide = function() {
     currentSlide--;
   }
 
-  goToSlide(currentSlide)
+  goToSlide(currentSlide) 
 }
 
 
@@ -182,7 +206,7 @@ init()
 
 
 //Events
-setInterval( nextSlide , 6000);
+setInterval( nextSlide , 1000); //3600000 1 hour
 }
 
 slideFunc()
