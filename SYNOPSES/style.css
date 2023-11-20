@@ -1002,12 +1002,51 @@ border-radius: 3px;
     max-width: 130rem; 
     display:grid;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap:5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
 }
 .show-image{
-    max-width:100%;
+    max-width:50%;
     height:auto;
     border-radius: 1rem;
 }
+
+.table-section{
+display: flex;
+max-width: 130rem; 
+margin: 0 auto;
+justify-content: center;
+width: 90rem;
+margin-top: 10rem;
+font-size:3rem
+}
+
+table{
+    border-collapse: collapse;
+    padding-right: 30rem;
+}
+
+.header-show{
+ text-align: center;
+ margin-bottom: 3rem;
+ font-weight: 500;
+ color: #862e9c;
+}
+th,td{
+padding: 2rem 4rem 5rem 4rem;
+}
+
+th{
+ background-color: #862e9c;
+ color: #fff;
+}
+tbody tr:nth-child(odd){
+    background-color: #862e9c;
+    color: #fff;
+
+ }
+
+ tbody tr:nth-child(even){
+    background-color: #862e9c;
+    color: #fff;
+ }
