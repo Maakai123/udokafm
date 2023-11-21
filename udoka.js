@@ -109,9 +109,12 @@ playAndPause.setAttribute('name', 'play-outline')
 dropDownList.forEach(list => {
   list.addEventListener('click', function(e) {
     e.preventDefault()
-   
+   console.log('click')
+
   })
 })
+
+
 
 
 //Sticky

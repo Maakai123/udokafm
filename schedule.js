@@ -10,6 +10,8 @@ const scheduleContainer = document.querySelector('.schedule-container')
 const scheduleDays = document.querySelectorAll('.schedule-day')
 const days = document.querySelectorAll('.schedule-nav-link')
 const scheduleNav = document.querySelector('.schedule-nav')
+const paperImage = document.querySelectorAll('.paper-image')
+const southEast = document.querySelectorAll('.south-east')
 
 
 const today = new Date()
@@ -18,6 +20,23 @@ const currentDay = today.getDay()
 console.log(currentDay)
 
 
+
+
+paperImage.forEach(image => {
+    image.addEventListener('click', function(){
+       window.location.href = "SYNOPSES/shows.html";
+    
+    })
+})
+
+
+southEast.forEach(image => {
+    image.addEventListener('click', function(){
+       window.location.href = "SYNOPSES/eyereport.html";
+       
+    
+    })
+})
 
 days.forEach((day, index) => {
 
@@ -43,6 +62,7 @@ days.forEach((day, index) => {
         scheduleDays[index].classList.remove('hide__content')
     })
 })
+
 
 
 
