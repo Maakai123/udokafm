@@ -209,7 +209,7 @@ init()
 
 
 //Events
-setInterval( nextSlide , 1000); //3600000 1 hour
+setInterval( nextSlide , 3600000); //3600000 1 hour
 }
 
 slideFunc()
