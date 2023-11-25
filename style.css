@@ -180,8 +180,12 @@ position: relative;
 .big-container{
     display: flex;
 }
+
+.opacity{
+    opacity:0;
+}
 .audio-container{
-    background-color: #181031;
+    background-color:#f3f3f3;
     position: absolute;
     padding: 15rem 4rem;
     right:0;
@@ -189,7 +193,6 @@ position: relative;
     margin:3rem;
     
 }
-
 
 
 .btn--cancel{ 
@@ -205,12 +208,7 @@ position: relative;
 
 
 }
-.absolute{
-    position: absolute;
-   top:-1.7rem;
-   left:2rem;
 
-}
 
 .big--icon {
 height: 4.5rem !important; 
@@ -221,14 +219,14 @@ height: 2.5rem;
 font-size: 20rem;
 display: flex;
 justify-content:space-between;
-color: #fff;
+color:#ff0000;
 margin-top: 2rem;
 position: relative;
 
 }
 
 .audio-icon:hover {
- color: #ff0000;
+ color:#ff0000;
 
 }
 
@@ -280,10 +278,11 @@ text-transform: capitalize;
 
 .music-player{
 display: flex;
-justify-content: space-between;
 align-items: center;
 font-size:2.5rem;
+
 }
+
 
 .back, .forward{
 color: #fff;
@@ -534,7 +533,13 @@ border: 2px solid #be4bdb;
  
 }
 
+.help-listener{
+ font-size:1.5rem !important;
+ font-weight: 100;
+ padding:0.3rem !important;
+ margin-top: 1.5rem;
 
+}
 .play--pause{
     width: 4rem;
     height: 4rem;
@@ -560,7 +565,9 @@ background: linear-gradient(to right, #be4bdb, #0074cc);
 .section-programs{
 /*padding: 2rem 5rem */
 /*background: linear-gradient(to right, #260f2c, #00233d);*/
-background-color: #862e9c;
+background-color:#fefbff;
+margin-top: 10rem;
+
 
 }
 
@@ -573,7 +580,7 @@ background-color: #862e9c;
 .heading{
     font-size: 4rem;
     line-height: 3;
-    color: #c0f7e7;
+    color: #862e9c;
     text-align: center;
     text-transform: uppercase;
    
@@ -637,7 +644,7 @@ object-fit: cover;
  padding: 2rem;
  color:#c0f7e7;
  margin-bottom: 2rem ;
- */
+*/
 
 position: absolute;
 top:0;
@@ -953,6 +960,7 @@ display:none;
 background-color: #ff0000;
 color: #fff;
 font-size: 1.5rem;
+font-weight: 200;
 padding: 1rem 2rem;
 display: inline-block;
 animation: pulse 1s infinite;
@@ -994,6 +1002,8 @@ border-radius: 3px;
     row-gap:3rem;
     padding: 5rem; 
 }
+
+
 
 /*Shows*/
 

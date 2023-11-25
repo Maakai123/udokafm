@@ -10,6 +10,7 @@ const playPause = document.querySelector('.play-pause')
 const playAndPause = document.querySelector('.play--pause')
 const musicPlayer = document.querySelector('.music-player')
 
+//listner container 
 const dropDownList = document.querySelectorAll('.drop-down-list')
 
 //hero sticky
@@ -50,15 +51,21 @@ stopButton.addEventListener('click', () => {
 
 
 
-displayBtn.addEventListener('click', function() {
+displayBtn.addEventListener('click', function(e) {
+  e.preventDefault()
     audioContainer.classList.remove('hidden')
+    audioContainer.style.backgroundColor = 'transparent';
+    displayBtn.classList.add('hidden')
 })
 
 cancelBtn.addEventListener('click', function(){
     audioContainer.classList.add('hidden')
+    audioContainer.style.backgroundColor = '#181031';
+    displayBtn.classList.remove('hidden')
     
 })
 
+/*
 playPause.addEventListener('click', function(){
 
   if(audio.paused){
@@ -72,7 +79,6 @@ playPause.addEventListener('click', function(){
   }
 
    
-    /*
      // Check if the button is currently in play state
     if(playPause.getAttribute('name') === 'play-outline') {
         audio.play()
@@ -86,10 +92,10 @@ playPause.addEventListener('click', function(){
         playPause.setAttribute('name', 'play-outline')
         
     }
- */
+ 
 })
-
-
+*/
+/*
 playAndPause.addEventListener('click', function(){
 
 if(audio.paused){
@@ -104,12 +110,14 @@ playAndPause.setAttribute('name', 'play-outline')
 
 })
 
-
+*/
 
 dropDownList.forEach(list => {
   list.addEventListener('click', function(e) {
     e.preventDefault()
    console.log('click')
+   window.location.href = "SYNOPSES/shows.html";
+   
 
   })
 })
@@ -152,13 +160,11 @@ obs.observe(sectionHero)
 const slideFunc = function () {
   const slides = document.querySelectorAll('.programs')
   const slider = document.querySelector('.image-slider')
-  const btnRight = document.querySelector('.slider__btn--left')
-  const btnLeft = document.querySelector('.slider__btn--right')
+ /// const btnRight = document.querySelector('.slider__btn--left')
+  //const btnLeft = document.querySelector('.slider__btn--right')
   //programs
 const imageSlider = document.querySelectorAll('.image-slider');
 
-
-  console.log(slides)
 
 let currentSlide = 0;
 const maxSlide =  slides.length;
@@ -203,13 +209,16 @@ const prevSlide = function() {
 
 const init = function(){
   goToSlide(0)
+
+  
 }
 
 init()
 
 
 //Events
-setInterval( nextSlide , 3600000); //3600000 1 hour
+setInterval( nextSlide,1000); //3600000 1 hour
+
 }
 
 slideFunc()
